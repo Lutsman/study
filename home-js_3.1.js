@@ -24,3 +24,5 @@ for (const userKey of userKeys){
     console.log(userKey);
     console.log(user[userKey]);
 }
+
+// сделать в формате ключь: значение

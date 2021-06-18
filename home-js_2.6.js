@@ -17,19 +17,22 @@ const numbers = [];
 let total = 0;
 let number = numbers[0];
 
-while (input !== null && typeof Number(input) === 'number') {
+while (input !== null) {
 
-    input = prompt('Введите число!');
-
-    if (isNaN(Number(input)) === true) {
+    if (isNaN(Number(input))) {
         alert('Было введено не число, попробуйте еще раз');
-    } else if (input !== null) {
-        numbers.push(input);
-    } else {
+        input = prompt('Введите число!');
+    } else if (input === null) {
         for (let number of numbers) {
             total += Number(number);
+            console.log('Общая сумма чисел равна ' + total);
         }
-        console.log('Общая сумма чисел равна ' + total);
+    } else if (input !== null) {
+        numbers.push(input);
+        input = prompt('Введите число!');
     }
 }
-// непонятно почему первый prompt не срабатывает
+for (let number of numbers) {
+    total += Number(number);
+}
+console.log('Общая сумма чисел равна ' + total);

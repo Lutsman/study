@@ -30,7 +30,7 @@ const findLongestWord = function (string) {
             longestWord = word;
         }
     }
-    return (longestWord);
+    return longestWord;
 };
 
 
