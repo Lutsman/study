@@ -18,11 +18,12 @@ user.premium = false;
 // console.log(user);
 
 const userKeys = Object.keys(user);
-console.log(userKeys);
+
+
+
 
 for (const userKey of userKeys){
-    console.log(userKey);
-    console.log(user[userKey]);
+    const userValues = user[userKey];
+    console.log(userKey + ':' + userValues);
 }
 
-// сделать в формате ключь: значение
