@@ -6,13 +6,13 @@
 
 const countTotalSalary = function (employees) {
     const salarys = Object.values(employees);
-    console.log(salarys);
+
     let totalSalary = 0;
 
     for (const salary of salarys) {
         totalSalary += salary;
     }
-    return totalSalary;
+    return 'Общая сумма затрат ' + totalSalary;
 };
 
 /*
