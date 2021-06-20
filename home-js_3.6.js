@@ -15,11 +15,11 @@ const products = [
 const calculateTotalPrice = function (allProdcuts, productName) {
 
     for (const product of products) {
-        console.log(Object.values(product));
         if (product.name === productName) {
             return product.price * product.quantity;
         }
     }
+
 
 };
 
