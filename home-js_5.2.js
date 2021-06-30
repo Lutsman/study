@@ -4,16 +4,17 @@
 // name - строка
 // age - число
 // followers - число
-// Добавь метод getInfo(), который, выводит строку: User ${имя} is ${возраст} years old and has ${кол-во фоловеров} followers
+// Добавь метод getInfo(), который, выводит строку: User ${имя} is ${возраст} years old and has ${кол-во фоловеров} followers.
 
 class User {
-    constructor(name, age) {
+    constructor({name, age, followers} = {}) {
         this.name = name;
         this.age = age;
+        this.followers = followers;
     }
 
     getInfo() {
-        console.log(this.age);
+        console.log(`User ${this.name} is ${this.age} years old and has ${this.followers} followers.`);
     }
 }
 
